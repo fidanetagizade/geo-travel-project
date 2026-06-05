@@ -3,10 +3,13 @@ import Filter from "./Filter";
 import Header from "./Header";
 import { useEffect, useState } from "react";
 
-function Home() {
+
+function Home({ list, setList }) {
     const [countries, setCountries] = useState([]);
     const [visibleCount, setVisibleCount] = useState(15);
     const [searchItem, setSearchItem] = useState("");
+    
+    
 
     useEffect(() => {
         fetch(`https://restcountries.com/v3.1/all?fields=name,flags,region,capital,population,cca3,borders`)
@@ -17,6 +20,16 @@ function Home() {
             })
             .catch(err => console.log("Xəta baş verdi:", err));
     }, []);
+
+    
+    const toggleBucketList = (country) => {
+        const isExist = list.some(item => item.cca3 === country.cca3);
+        if (isExist) {
+            setList(list.filter(item => item.cca3 !== country.cca3));
+        } else {
+            setList([...list, country]);
+        }
+    };
 
     const filteredCountries = countries.filter((country) =>
         country.name.common.toLowerCase().includes(searchItem.toLowerCase())
@@ -33,8 +46,19 @@ function Home() {
                 ) : (
                     <div className="countries-container">
                         {filteredCountries.slice(0, visibleCount).map((country) => {
+                            const isFavorite = list.some(item => item.cca3 === country.cca3);
+
                             return (
                                 <div key={country.cca3} className="country-card">
+                                    
+                                    
+                                    <button 
+                                        className="heart-btn" 
+                                        onClick={() => toggleBucketList(country)}
+                                    >
+                                        {isFavorite ? '❤️' : '🤍'}
+                                    </button>
+
                                     <img
                                         src={country.flags.png}
                                         alt={`${country.name.common} bayrağı`}
@@ -52,7 +76,6 @@ function Home() {
                     </div>
                 )}
 
-                
                 {filteredCountries.length > visibleCount && (
                     <div className="btn-container">
                         <button className="show-more-btn" onClick={() => setVisibleCount(visibleCount + 12)}>

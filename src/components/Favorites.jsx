@@ -1,13 +1,14 @@
 import "./Favorites.css"
 import Header from "./Header";
 
-function Favorites({ bucketList, setBucketList }) {
+function Favorites({ list, setList }) {
 
     const removeFromFavorites = (country) => {
-        setBucketList(bucketList.filter(item => item.cca3 !== country.cca3));
+        setList(list.filter(item => item.cca3 !== country.cca3));
     };
 
     return (
+
         <div>
             <Header />
             <div className="main">
@@ -15,13 +16,13 @@ function Favorites({ bucketList, setBucketList }) {
                     My Favorite Countries!
                 </h1>
                 
-                {bucketList.length === 0 ? (
+                {list.length === 0 ? (
                     <h2 className="not-found-msg" style={{ marginTop: "50px" }}>
                         Your favorite list is empty...
                     </h2>
                 ) : (
                     <div className="countries-container">
-                        {bucketList.map((country) => (
+                        {list.map((country) => (
                             <div key={country.cca3} className="country-card">
                                 
                                 <button 
@@ -48,7 +49,23 @@ function Favorites({ bucketList, setBucketList }) {
                 )}
             </div>
         </div>
+       
     );
 }
 
 export default Favorites; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

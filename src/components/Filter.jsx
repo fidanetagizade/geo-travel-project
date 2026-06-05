@@ -6,9 +6,10 @@ function Filter({ setSearchItem }) {
     const [localSearch, setLocalSearch] = useState("");
     
     const handleSearchSubmit = (e) => {
-        e.preventDefault(); 
-        setSearchItem(localSearch); 
-    };
+    e.preventDefault(); 
+    const cleanedSearch = localSearch.trim();
+    setSearchItem(cleanedSearch); 
+};
 
     return (
         <form className="filter-container" onSubmit={handleSearchSubmit}>
