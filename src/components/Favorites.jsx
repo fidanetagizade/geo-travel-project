@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Favorites.css";
+import "./Favorites.css"
 import Header from "./Header";
 
 function Favorites({ list, setList }) {
@@ -12,22 +12,22 @@ function Favorites({ list, setList }) {
     return (
         <div>
             <Header />
-            <div className="main">
+            <div className="fav-main">
                 <h1 className="favorite-input">
                     My Favorite Countries!
                 </h1>
                 
                 {list.length === 0 ? (
-                    <h2 className="not-found-msg" style={{ marginTop: "50px" }}>
+                    <h2 className="fav-not-found-msg" style={{ marginTop: "50px" }}>
                         Your favorite list is empty...
                     </h2>
                 ) : (
                     <>
-                        <div className="countries-container">
+                        <div className="fav-countries-container">
                             {list.slice(0, visibleCount).map((country) => (
-                                <div key={country.cca3} className="country-card">
+                                <div key={country.cca3} className="fav-country-card">
                                     <button 
-                                        className="heart-btn" 
+                                        className="fav-heart-btn" 
                                         onClick={() => removeFromFavorites(country)}
                                     >
                                         ❤️
@@ -36,9 +36,9 @@ function Favorites({ list, setList }) {
                                     <img
                                         src={country.flags.png}
                                         alt={`${country.name.common} bayrağı`}
-                                        className="country-flag"
+                                        className="fav-country-flag"
                                     />
-                                    <div className="country-details">
+                                    <div className="fav-country-details">
                                         <h3>{country.name.common}</h3>
                                         <p><strong>Population:</strong> {country.population.toLocaleString()}</p>
                                         <p><strong>Region:</strong> {country.region}</p>
@@ -49,9 +49,9 @@ function Favorites({ list, setList }) {
                         </div>
 
                         {list.length > visibleCount && (
-                            <div className="btn-container">
+                            <div className="fav-btn-container">
                                 <button 
-                                    className="show-more-btn" 
+                                    className="fav-show-more-btn" 
                                     onClick={() => setVisibleCount(prev => prev + 12)}
                                 >
                                     Show More

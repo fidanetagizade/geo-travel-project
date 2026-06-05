@@ -1,3 +1,7 @@
+/* ==========================================================================
+   1. BAZA STİLLƏRİ (PC ÖLÇÜSÜ: 992px - 2000px)
+   ========================================================================== */
+
 .tools-main {
     padding: 4vw 5vw; 
     background-color: #0f172a;
@@ -14,30 +18,29 @@
     text-align: center;
     font-size: 3vw; 
     margin-bottom: 3.23vw; 
-    margin-top:-2.99vw;
+    margin-top: 0vw; 
     color: #93c5fd;
     font-weight: 700;
     letter-spacing: 0.04vw;
 }
-
 
 .tools-flex {
     display: flex;
     flex-direction: column; 
     align-items: center;    
     gap: 3.63vw;              
-    max-width: 105.01vw; 
+    width: 100%;
+    max-width: 100%; /* DÜZƏLİŞ: Ekrandan kənara çıxmaması üçün 100% edildi */
 }
-
 
 .tool-card {
     background-color: #1e293b; 
-    width: 50vw;           
+    width: 50vw;          
     min-height: 10vw;      
-    border: 0.08vw solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* DÜZƏLİŞ: vw-dan px-ə keçirildi (titrəməni kəsir) */
     border-radius: 1.94vw; 
     padding: 3.63vw; 
-    box-shadow: 0 1.94vw 4.04vw -0.97vw rgba(0, 0, 0, 0.6);
+    box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.6); /* DÜZƏLİŞ: Kölgə px ilə stabilləşdirildi */
     display: flex;
     flex-direction: column; 
     box-sizing: border-box;
@@ -61,19 +64,21 @@
     gap: 1vw; 
     margin-bottom: 2.42vw;
     width: 100%;
+    align-items: center; 
 }
 
 .todo-form input, .budget-form input {
     height: 3.9vw; 
     background-color: #0f172a; 
-    border: 0.08vw solid rgba(255, 255, 255, 0.15); 
+    border: 1px solid rgba(255, 255, 255, 0.15); 
     border-radius: 0.97vw; 
     color: white; 
     padding: 0 1.62vw; 
     outline: none; 
     font-size: 1.1vw;
     min-width: 0; 
-    transition: border-color 0.2s;
+    transition: border-color 0.2s ease; 
+    box-sizing: border-box;
 }
 
 .todo-form input:focus, .budget-form input:focus {
@@ -92,10 +97,9 @@
     flex: 1.2; 
 }
 
-
 .todo-form button, .budget-form button {
-    width: 3.5vw; 
-    height: 3.3vw;
+    width: 4vw; 
+    height: 3.9vw; 
     background-color: #3b82f6; 
     color: white; 
     border: none; 
@@ -106,18 +110,16 @@
     justify-content: center;
     align-items: center;
     flex-shrink: 0; 
-    transition: all 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.2s ease; 
 }
 
 .todo-form button:hover, .budget-form button:hover {
     background-color: #2563eb;
-    transform: translateY(-0.16vw);
-}
-
+    transform: translateY(-2px);
+ }
 
 .tool-card ul, .tool-card .todo-list {
     list-style: none;
-    list-style-type: none ;
     padding: 0 ;
     margin: 0 ;
     display: flex;
@@ -126,22 +128,21 @@
 }
 
 .tool-card ul li {
-    list-style: none;
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    padding: 0.8vw 0.8vw;
+    padding: 1vw;
     background-color: #0f172a; 
-    border: 0.08vw solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05); 
     border-radius: 0.97vw;
-    font-size: 0.97vw;
+    font-size: 1.1vw; 
     color: #e2e8f0;
 }
 
 .todo-text {
     cursor: pointer;
     flex: 1;
-    transition: all 0.2s ease;
+    transition: color 0.2s ease, opacity 0.2s ease; 
     word-break: break-all;      
     overflow-wrap: break-word;
 }
@@ -163,28 +164,28 @@
     font-weight: 600;
     font-size: 1.2vw;
 }
+
 .delete-btn {
     background: none;
     border: none;
     color: #ef4444; 
-    font-size:1.6vw ;
+    font-size: 1.6vw ;
     cursor: pointer;
     padding: 0.32vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.2s;
+    transition: transform 0.2s ease; 
 }
 
 .delete-btn:hover {
-    transform: scale(1.25);
+    transform: scale(1.15);
 }
-
 
 .todo-stats {
     margin-top: auto; 
     padding-top: 2.02vw;
-    border-top: 0.08vw solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
     font-size: 1.37vw;
     color: #94a3b8;
     text-align: center;
@@ -195,4 +196,144 @@
     color: #3b82f6;
     font-size: 1.78vw;
     font-weight: 700;
+}
+
+
+
+@media screen and (min-width: 601px) and (max-width: 991px) {
+    .tools-title {
+        font-size: 5vw;
+        margin-bottom: 5vw;
+    }
+
+    .tool-card {
+        width: 80vw; 
+        padding: 5vw;
+        border-radius: 3vw;
+    }
+
+    .tool-card h2 { font-size: 3.5vw; }
+    .tool-card p { font-size: 2.2vw; }
+
+    .todo-form input, .budget-form input {
+        height: 6.5vw;
+        font-size: 2vw;
+        border-radius: 1.5vw;
+    }
+
+    .todo-form button, .budget-form button {
+        width: 7vw;
+        height: 6.5vw;
+        font-size: 2.8vw;
+        border-radius: 1.5vw;
+    }
+
+    .tool-card ul li {
+        font-size: 2vw;
+        padding: 2vw;
+        border-radius: 1.5vw;
+    }
+
+    .expense-amount { font-size: 2.2vw; }
+    .delete-btn { font-size: 2.8vw; }
+    .todo-stats { font-size: 2.2vw; padding-top: 3vw; }
+    .budget-total span { font-size: 2.8vw; }
+}
+
+@media screen and (max-width: 600px) {
+    .tools-main {
+        padding: 8vw 4vw; 
+    }
+
+    .tools-title {
+        font-size: 7vw;
+        margin-bottom: 8vw;
+    }
+
+    .tool-card {
+        width: 92vw; 
+        padding: 6vw 5vw;
+        border-radius: 4vw;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); 
+    }
+
+    .tool-card h2 {
+        font-size: 5.5vw;
+        margin-bottom: 2vw;
+    }
+
+    .tool-card p {
+        font-size: 3.6vw;
+        margin-bottom: 5vw;
+    }
+
+    .budget-form {
+        flex-direction: column;
+        gap: 3vw;
+    }
+
+    .budget-input-text, 
+    .budget-input-num {
+        flex: none ; 
+        width: 100%;           
+    }
+
+    .todo-form {
+        gap: 2.5vw; 
+    }
+
+    .todo-form input, .budget-form input {
+        width: 100%;
+        height: 10vw; 
+        font-size: 3.8vw;
+        border-radius: 2vw;
+        padding: 0 3vw;
+    }
+
+    .todo-form button {
+        width: 12vw; 
+        height: 10vw;
+        font-size: 5vw;
+        border-radius: 2vw;
+    }
+
+    .budget-form button {
+        width: 100%; 
+        height: 10vw;
+        font-size: 4vw;
+        border-radius: 2vw;
+    }
+
+    .tool-card ul, .tool-card .todo-list {
+        gap: 2.5vw;
+    }
+
+    .tool-card ul li {
+        font-size: 3.6vw;
+        padding: 3vw;
+        border-radius: 2vw;
+    }
+
+    .expense-right {
+        gap: 4vw;
+    }
+
+    .expense-amount {
+        font-size: 3.8vw;
+    }
+
+    .delete-btn {
+        font-size: 5vw; 
+        padding: 1vw;
+    }
+
+    .todo-stats {
+        font-size: 3.6vw;
+        padding-top: 4vw;
+        margin-top: 4vw;
+    }
+
+    .budget-total span {
+        font-size: 4.5vw;
+    }
 }

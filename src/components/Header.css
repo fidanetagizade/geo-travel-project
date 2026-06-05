@@ -1,35 +1,80 @@
 .header-container {
     width: 100%;
-    height:5.3vw;
+    height: 4.8vw;
     background: linear-gradient(to right, #0f172a, #1e3a8a, #3b82f6, #1e3a8a, #0f172a);
     display: flex;
     align-items: center;
     justify-content: space-between; 
-    padding: 0 5vw; 
-    margin-bottom:2vw;
-    margin-top:1.3vw;
+    padding: 0 5vw;
+    margin-bottom: 2vw;
+    margin-top: 1vw;
+    box-sizing: border-box;
 }
 
 .header-title {
     color: white;
-    font-size: 2.6vw;
+    font-size: 2vw;
     font-weight: bold;
 }
 
 .nav-links {
     display: flex;
-    gap: 2.42vw; 
+    gap: 2.5vw; 
 }
 
 .nav-link {
     color: white;
     text-decoration: none; 
-    font-size: 1.6vw;
+    font-size: 1.2vw;
     font-weight: 500;
     opacity: 0.7; 
+    transition: color 0.2s ease, opacity 0.2s ease;
 }
-
 
 .nav-link:hover {
     color: #93c5fd; 
+    opacity: 1;
+}
+
+@media screen and (min-width: 601px) and (max-width: 991px) {
+    .header-container {
+        height: 7vw;
+        padding: 0 4vw;
+        margin-top: 0vw; 
+        margin-bottom: 3vw;
+    }
+
+    .header-title {
+        font-size: 3.5vw; 
+    }
+
+    .nav-links {
+        gap: 3.5vw; 
+    }
+
+    .nav-link {
+        font-size: 2vw; 
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header-container {
+        height: 12vw;
+        padding: 0 4vw;
+        margin-top: 0vw;
+        margin-bottom: 5vw;
+    }
+
+    .header-title {
+        font-size: 5vw; 
+    }
+
+    .nav-links {
+        gap: 4.5vw; 
+    }
+
+    .nav-link {
+        font-size: 3.6vw; 
+        opacity: 0.85; 
+    }
 }
