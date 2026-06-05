@@ -2,29 +2,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px; 
-    margin-top: 10px; 
-    margin-bottom: 40px;
-    padding: 0 20px;
+    gap: 1.21vw; 
+    margin-top:0.81vw; 
+    margin-bottom: 3.23vw;
+    padding: 0 1.62vw;
 }
 
 .input {
     width: 100%;
-    max-width: 400px;
-    height: 48px; 
-    border-radius: 30px; 
-    font-size: 16px;
-    padding-left: 20px;
+    max-width: 25vw;
+    height: 2.8vw; 
+    border-radius: 2.42vw; 
+    font-size: 1vw;
+    padding-left: 1.62vw;
     background-color: #1e293b; 
     color: white; 
-    border: 1px solid rgba(255, 255, 255, 0.1); 
+    border: 0.08vw solid rgba(255, 255, 255, 0.1); 
     outline: none;
     transition: all 0.3s ease;
 }
 
 .input:focus {
     border-color: #3b82f6; 
-    box-shadow: 0 0 12px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 0.97vw rgba(59, 130, 246, 0.3);
     background-color: #0f172a;
 }
 
@@ -33,22 +33,22 @@
 }
 
 .search {
-    padding: 0 25px;
-    height: 48px; 
-    border-radius: 30px; 
-    font-size: 15px;
+    padding: 0 2.02vw;
+    height: 2.8vw; 
+    border-radius: 2vw; 
+    font-size: 0.9vw;
     font-weight: 600;
     background: linear-gradient(135deg, #3b82f6, #1d4ed8); 
     color: white;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.32vw 0.48vw rgba(0, 0, 0, 0.2);
 }
 
 .search:hover {
-    transform: translateY(-2px); 
-    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4); 
+    transform: translateY(-0.16vw); 
+    box-shadow: 0 0.48vw 1.62vw rgba(59, 130, 246, 0.4); 
     
 }
 

@@ -1,5 +1,5 @@
 .tools-main {
-    padding: 60px 5vw; 
+    padding: 4vw 5vw; 
     background-color: #0f172a;
     min-height: 100vh;
     color: white;
@@ -12,12 +12,12 @@
 
 .tools-title {
     text-align: center;
-    font-size: 46px; 
-    margin-bottom: 40px; 
-    margin-top:-37px;
+    font-size: 3vw; 
+    margin-bottom: 3.23vw; 
+    margin-top:-2.99vw;
     color: #93c5fd;
     font-weight: 700;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.04vw;
 }
 
 
@@ -25,8 +25,8 @@
     display: flex;
     flex-direction: column; 
     align-items: center;    
-    gap: 45px;              
-    max-width: 1300px; 
+    gap: 3.63vw;              
+    max-width: 105.01vw; 
 }
 
 
@@ -34,44 +34,44 @@
     background-color: #1e293b; 
     width: 50vw;           
     min-height: 10vw;      
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 24px; 
-    padding: 45px; 
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+    border: 0.08vw solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.94vw; 
+    padding: 3.63vw; 
+    box-shadow: 0 1.94vw 4.04vw -0.97vw rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column; 
     box-sizing: border-box;
 }
 
 .tool-card h2 {
-    font-size: 32px; 
-    margin-bottom: 12px;
+    font-size: 2vw; 
+    margin-bottom: 0.97vw;
     color: #f8fafc;
     font-weight: 600;
 }
 
 .tool-card p {
     color: #94a3b8;
-    font-size: 16px;
-    margin-bottom: 35px;
+    font-size: 1.3vw;
+    margin-bottom: 2.83vw;
 }
 
 .todo-form, .budget-form {
     display: flex;
-    gap: 14px; 
-    margin-bottom: 30px;
+    gap: 1vw; 
+    margin-bottom: 2.42vw;
     width: 100%;
 }
 
 .todo-form input, .budget-form input {
-    height: 56px; 
+    height: 3.9vw; 
     background-color: #0f172a; 
-    border: 1px solid rgba(255, 255, 255, 0.15); 
-    border-radius: 12px; 
+    border: 0.08vw solid rgba(255, 255, 255, 0.15); 
+    border-radius: 0.97vw; 
     color: white; 
-    padding: 0 20px; 
+    padding: 0 1.62vw; 
     outline: none; 
-    font-size: 16px;
+    font-size: 1.1vw;
     min-width: 0; 
     transition: border-color 0.2s;
 }
@@ -92,15 +92,15 @@
     flex: 1.2; 
 }
 
-/* "+" Düymələrinin böyüdülməsi */
+
 .todo-form button, .budget-form button {
-    width: 56px; 
-    height: 56px;
+    width: 3.5vw; 
+    height: 3.3vw;
     background-color: #3b82f6; 
     color: white; 
     border: none; 
-    border-radius: 12px; 
-    font-size: 26px; 
+    border-radius: 0.97vw; 
+    font-size: 1.6vw; 
     cursor: pointer; 
     display: flex;
     justify-content: center;
@@ -111,30 +111,30 @@
 
 .todo-form button:hover, .budget-form button:hover {
     background-color: #2563eb;
-    transform: translateY(-2px);
+    transform: translateY(-0.16vw);
 }
 
-/* 🎯 SİYAHI STİLLƏRİ */
+
 .tool-card ul, .tool-card .todo-list {
-    list-style: none !important;
-    list-style-type: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
+    list-style: none;
+    list-style-type: none ;
+    padding: 0 ;
+    margin: 0 ;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 1vw;
 }
 
 .tool-card ul li {
-    list-style: none !important;
+    list-style: none;
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    padding: 16px 22px;
+    padding: 0.8vw 0.8vw;
     background-color: #0f172a; 
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    font-size: 17px;
+    border: 0.08vw solid rgba(255, 255, 255, 0.05);
+    border-radius: 0.97vw;
+    font-size: 0.97vw;
     color: #e2e8f0;
 }
 
@@ -142,6 +142,8 @@
     cursor: pointer;
     flex: 1;
     transition: all 0.2s ease;
+    word-break: break-all;      
+    overflow-wrap: break-word;
 }
 
 .todo-text.completed {
@@ -153,23 +155,21 @@
 .expense-right {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 1.62vw;
 }
 
 .expense-amount {
     color: #10b981; 
     font-weight: 600;
-    font-size: 18px;
+    font-size: 1.2vw;
 }
-
-
 .delete-btn {
     background: none;
     border: none;
     color: #ef4444; 
-    font-size: 22px;
+    font-size:1.6vw ;
     cursor: pointer;
-    padding: 4px;
+    padding: 0.32vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -183,9 +183,9 @@
 
 .todo-stats {
     margin-top: auto; 
-    padding-top: 25px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 17px;
+    padding-top: 2.02vw;
+    border-top: 0.08vw solid rgba(255, 255, 255, 0.1);
+    font-size: 1.37vw;
     color: #94a3b8;
     text-align: center;
     font-weight: 500;
@@ -193,6 +193,6 @@
 
 .budget-total span {
     color: #3b82f6;
-    font-size: 22px;
+    font-size: 1.78vw;
     font-weight: 700;
 }
