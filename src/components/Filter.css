@@ -10,8 +10,8 @@
 
 .input {
     width: 100%;
-    max-width: 32vw; 
-    height: 3.4vw;   
+    max-width: 20vw; 
+    height: 3vw;   
     border-radius: 24px; 
     font-size: 1.1vw; 
     padding-left: 1.8vw;
@@ -35,9 +35,9 @@
 
 .search {
     padding: 0 2.5vw;   
-    height: 3.4vw;   
+    height: 3vw;   
     border-radius: 24px; 
-    font-size: 1.1vw; 
+    font-size: 1vw; 
     font-weight: 600;
     background: linear-gradient(135deg, #3b82f6, #1d4ed8); 
     color: white;

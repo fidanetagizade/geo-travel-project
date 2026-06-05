@@ -51,6 +51,7 @@
     z-index: 10;
 }
 
+
 .fav-heart-btn:hover {
     transform: scale(1.2); 
 }

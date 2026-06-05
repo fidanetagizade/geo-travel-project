@@ -58,6 +58,7 @@ function Favorites({ list, setList }) {
                                 </button>
                             </div>
                         )}
+                    
                     </>
                 )}
             </div>
