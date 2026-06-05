@@ -1,0 +1,198 @@
+.tools-main {
+    padding: 60px 5vw; 
+    background-color: #0f172a;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    box-sizing: border-box;
+}
+
+.tools-title {
+    text-align: center;
+    font-size: 46px; 
+    margin-bottom: 40px; 
+    margin-top:-37px;
+    color: #93c5fd;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+
+.tools-flex {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 45px;              
+    max-width: 1300px; 
+}
+
+
+.tool-card {
+    background-color: #1e293b; 
+    width: 50vw;           
+    min-height: 10vw;      
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px; 
+    padding: 45px; 
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column; 
+    box-sizing: border-box;
+}
+
+.tool-card h2 {
+    font-size: 32px; 
+    margin-bottom: 12px;
+    color: #f8fafc;
+    font-weight: 600;
+}
+
+.tool-card p {
+    color: #94a3b8;
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+.todo-form, .budget-form {
+    display: flex;
+    gap: 14px; 
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.todo-form input, .budget-form input {
+    height: 56px; 
+    background-color: #0f172a; 
+    border: 1px solid rgba(255, 255, 255, 0.15); 
+    border-radius: 12px; 
+    color: white; 
+    padding: 0 20px; 
+    outline: none; 
+    font-size: 16px;
+    min-width: 0; 
+    transition: border-color 0.2s;
+}
+
+.todo-form input:focus, .budget-form input:focus {
+    border-color: #3b82f6; 
+}
+
+.todo-form input {
+    flex: 1;
+}
+
+.budget-input-text {
+    flex: 2; 
+}
+
+.budget-input-num {
+    flex: 1.2; 
+}
+
+/* "+" Düymələrinin böyüdülməsi */
+.todo-form button, .budget-form button {
+    width: 56px; 
+    height: 56px;
+    background-color: #3b82f6; 
+    color: white; 
+    border: none; 
+    border-radius: 12px; 
+    font-size: 26px; 
+    cursor: pointer; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; 
+    transition: all 0.2s ease;
+}
+
+.todo-form button:hover, .budget-form button:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+}
+
+/* 🎯 SİYAHI STİLLƏRİ */
+.tool-card ul, .tool-card .todo-list {
+    list-style: none !important;
+    list-style-type: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.tool-card ul li {
+    list-style: none !important;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 16px 22px;
+    background-color: #0f172a; 
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    font-size: 17px;
+    color: #e2e8f0;
+}
+
+.todo-text {
+    cursor: pointer;
+    flex: 1;
+    transition: all 0.2s ease;
+}
+
+.todo-text.completed {
+    text-decoration: line-through;
+    color: #64748b;
+    opacity: 0.6;
+}
+
+.expense-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.expense-amount {
+    color: #10b981; 
+    font-weight: 600;
+    font-size: 18px;
+}
+
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #ef4444; 
+    font-size: 22px;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.delete-btn:hover {
+    transform: scale(1.25);
+}
+
+
+.todo-stats {
+    margin-top: auto; 
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 17px;
+    color: #94a3b8;
+    text-align: center;
+    font-weight: 500;
+}
+
+.budget-total span {
+    color: #3b82f6;
+    font-size: 22px;
+    font-weight: 700;
+}
