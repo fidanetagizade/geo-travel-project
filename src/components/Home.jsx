@@ -11,15 +11,32 @@ function Home({ list, setList }) {
     
     
 
-    useEffect(() => {
-        fetch(`https://restcountries.com/v3.1/all?fields=name,flags,region,capital,population,cca3,borders`)
-            .then(res => res.json())
-            .then(data => {
-                setCountries(data);
-                console.log(data);
-            })
-            .catch(err => console.log("Xəta baş verdi:", err));
-    }, []);
+ useEffect(() => {
+    fetch(`https://api.restcountries.com/countries/v5?limit=100`, {
+        headers: {
+            'Authorization': 'Bearer ' + import.meta.env.VITE_API_KEY
+        }
+    })
+        .then(res => res.json())
+        .then(json => {
+            console.log(json);
+
+            const rawList = json.data.objects; 
+
+            const normalized = rawList.map(country => ({
+                name: { common: country.names.common },
+                flags: { png: country.flag.url_png },
+                region: country.region,
+                capital: country.capitals?.map(c => c.name) || [],
+                population: country.population,
+                cca3: country.codes.alpha_3,
+                borders: country.borders,
+            }));
+
+            setCountries(normalized);
+        })
+        .catch(err => console.log("Xəta baş verdi:", err));
+}, []);
 
     
     const toggleBucketList = (country) => {
