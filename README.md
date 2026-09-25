@@ -1,16 +1,38 @@
-# React + Vite
+# Geo Travel Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based web application for exploring countries around the world and planning your travels — combining country data with practical trip-planning tools like budgeting and packing lists.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 🌍 **Country Explorer** — browse countries with their flags, names, population, and other key details, pulled from the REST Countries API
+- 🔍 **Search** — quickly search and filter countries by name
+- ⭐ **Favorites** — mark countries as favorites from the Home page; they appear in a dedicated Favorites page for easy access
+- 💰 **Budget Planner** — plan and track your travel budget for a trip
+- ✅ **Packing To-Do List** — add items you need to pack; click an item to mark it as packed (strikethrough)
+- 🎨 Clean, custom UI styled with CSS
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Redux Toolkit (state management)
+- React Router (page navigation)
+- REST Countries API (restcountries.com, v5)
+- CSS
 
-## Expanding the ESLint configuration
+## How to Run
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+git clone https://github.com/fidanetagizade/geo-travel-project.git
+cd geo-travel-project
+npm install
+```
+
+Create a `.env` file in the root directory and add your own REST Countries API key:
+
+VITE_API_KEY=your_api_key_here
+
+Then start the dev server:
+
+```bash
+npm run dev
+```
